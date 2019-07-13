@@ -1,0 +1,9 @@
+source 'https://github.com/soramitsu/podspec-ios.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+target 'SoraCryptoTests' do
+  pod 'SoraCrypto', :path => '../'
+  
+  
+end
