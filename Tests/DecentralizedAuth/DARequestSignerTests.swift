@@ -114,8 +114,8 @@ class DARequestSignerTests: XCTestCase {
     // MARK: Private
 
     func createRawSignerWith(privateKey: Data) -> IRSignatureCreatorProtocol {
-        let privateKeyObject = IREd25519PrivateKey(rawData: privateKey)!
+        let privateKeyObject = try! IRIrohaPrivateKey(rawData: privateKey)
 
-        return IREd25519Sha512Signer(privateKey: privateKeyObject)!
+        return IRIrohaSigner(privateKey: privateKeyObject)
     }
 }

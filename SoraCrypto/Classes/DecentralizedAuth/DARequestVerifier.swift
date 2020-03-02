@@ -27,11 +27,11 @@ public class DARequestVerifier: DARequestVerifierProtocol {
             return false
         }
 
-        guard let signature = IREd25519Sha512Signature(rawData: signedRequest.signature) else {
+        guard let signature = try? IRIrohaSignature(rawData: signedRequest.signature) else {
             return false
         }
 
-        guard let publicKey = IREd25519PublicKey(rawData: publicKey) else {
+        guard let publicKey = try? IRIrohaPublicKey(rawData: publicKey) else {
             return false
         }
 

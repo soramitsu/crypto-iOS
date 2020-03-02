@@ -8,7 +8,7 @@ import SoraCrypto
 import IrohaCrypto
 
 class DARequestVerifierTests: XCTestCase {
-    var verifier = DARequestVerifier(rawVerifier: IREd25519Sha512Verifier())
+    var verifier = DARequestVerifier(rawVerifier: IRIrohaSignatureVerifier())
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -96,7 +96,7 @@ class DARequestVerifierTests: XCTestCase {
     // MARK: Private
 
     func createRawSignerWith(privateKey: Data) -> IRSignatureCreatorProtocol {
-        let privateKeyObject = IREd25519PrivateKey(rawData: privateKey)!
-        return IREd25519Sha512Signer(privateKey: privateKeyObject)!
+        let privateKeyObject = try! IRIrohaPrivateKey(rawData: privateKey)
+        return IRIrohaSigner(privateKey: privateKeyObject)
     }
 }

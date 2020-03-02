@@ -8,7 +8,7 @@ import IrohaCrypto
 
 extension Data {
     public init?(hexString: String) {
-        guard let data = NSData(hexString: hexString) as Data? else {
+        guard let data = try? NSData(hexString: hexString) as Data else {
             return nil
         }
 

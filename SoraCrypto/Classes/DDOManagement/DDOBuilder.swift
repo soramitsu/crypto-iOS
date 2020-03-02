@@ -12,7 +12,6 @@ public enum DDOBuilderError: Error {
     case noPublicKeysFound
     case noAuthentificationFound
     case publicKeyIndexOutOfRange
-    case signingFailed
 }
 
 public class DDOBuilder {
@@ -121,9 +120,7 @@ public class DDOBuilder {
         let documentData = try encoder.encode(document)
         let optionsData = try encoder.encode(options)
 
-        guard let signature = signer.sign(documentData + optionsData) else {
-            throw DDOBuilderError.signingFailed
-        }
+        let signature = try signer.sign(documentData + optionsData)
 
         let signatureString = try stringCoder.encode(signature.rawData())
 

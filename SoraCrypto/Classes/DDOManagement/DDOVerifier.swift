@@ -12,8 +12,6 @@ public enum DDOVerifierError: Error {
     case noProofPublicKeyFound
     case noPublicKeysFound
     case noAuthentificationFound
-    case invalidSignatureData
-    case invalidPublicKeyData
 }
 
 public class DDOVerifier {
@@ -53,9 +51,7 @@ extension DDOVerifier: DDOVerifierProtocol {
 
         let proofPublicKeyData = try stringCoder.decodeData(proofPublicKey.publicKey)
 
-        guard let proofPublicKeyWrapper = IREd25519PublicKey(rawData: proofPublicKeyData) else {
-            throw DDOVerifierError.invalidPublicKeyData
-        }
+        let proofPublicKeyWrapper = try IRIrohaPublicKey(rawData: proofPublicKeyData)
 
         let jsonEncoder = JSONEncoder()
         let ddoNodeData = try jsonEncoder.encode(ddo)
@@ -83,9 +79,7 @@ extension DDOVerifier: DDOVerifierProtocol {
 
         let signatureData = try stringCoder.decodeData(ddo.proof.signatureValue)
 
-        guard let signature = IREd25519Sha512Signature(rawData: signatureData) else {
-            throw DDOVerifierError.invalidSignatureData
-        }
+        let signature = try IRIrohaSignature(rawData: signatureData)
 
         return signatureVerifier.verify(signature,
                                         forOriginalData: originalData,

@@ -1,7 +1,9 @@
 PODS:
-  - IrohaCrypto (0.2.6)
-  - SoraCrypto (0.1.0):
-    - IrohaCrypto
+  - IrohaCrypto/Common (0.3.0)
+  - IrohaCrypto/Iroha (0.3.0):
+    - IrohaCrypto/Common
+  - SoraCrypto (0.1.3):
+    - IrohaCrypto/Iroha (~> 0.3.0)
     - SoraDocuments
   - SoraDocuments (0.1.2)
 
@@ -9,7 +11,7 @@ DEPENDENCIES:
   - SoraCrypto (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - IrohaCrypto
   https://github.com/soramitsu/podspec-ios.git:
     - SoraDocuments
@@ -19,10 +21,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IrohaCrypto: 4eb85b5edbf7667b5ffcef1b5104357f18ca8e81
-  SoraCrypto: 170a66a222277786821f1500ebd23f14a12beabc
+  IrohaCrypto: 5d518bd6fcde6d90be5e3f4d077d6cadb6e43fad
+  SoraCrypto: f41ee5c8d897a4f7a42632d530bb2c67b6d641a6
   SoraDocuments: 15c40b30e0e90d08eeb8c79c83977465bc3cf3a2
 
 PODFILE CHECKSUM: c8d069e61fd4fe03cb67c523932c397c3d82fce8
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.0

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SoraCrypto'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Library contains cryptography related implementation for Sora plaform.'
 
   s.homepage         = 'https://github.com/soramitsu'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SoraCrypto/Classes/**/*'
 
-  s.dependency 'IrohaCrypto'
+  s.dependency 'IrohaCrypto/Iroha', '~> 0.3.0'
   s.dependency 'SoraDocuments'
 
   s.test_spec do |st|

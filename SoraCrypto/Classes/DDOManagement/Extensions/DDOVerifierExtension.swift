@@ -11,6 +11,6 @@ extension DDOVerifier {
         return DDOVerifier()
             .with(encoder: DocumentOneCoder())
             .with(stringCoder: DocumentStringCoder())
-            .with(signatureVerifier: IREd25519Sha512Verifier())
+            .with(signatureVerifier: IRIrohaSignatureVerifier())
     }
 }
