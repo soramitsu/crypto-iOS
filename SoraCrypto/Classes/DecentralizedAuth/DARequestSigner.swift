@@ -9,7 +9,6 @@ import IrohaCrypto
 public enum DARequestSignerError: Error {
     case invalidURLRequest
     case signingDataBuildingFailed
-    case signatureCreationFailed
 }
 
 public protocol DARequestSignerProtocol {
@@ -60,9 +59,7 @@ public class DARequestSigner: DARequestSignerProtocol {
             throw DARequestSignerError.signingDataBuildingFailed
         }
 
-        guard let signature = rawSigner.sign(dataToSign) else {
-            throw DARequestSignerError.signatureCreationFailed
-        }
+        let signature = try rawSigner.sign(dataToSign)
 
         return DASignedRequest(request: request, signature: signature.rawData(), decentralizedId: decentralizedId,
                                publicKeyId: publicKeyId, timestamp: created)

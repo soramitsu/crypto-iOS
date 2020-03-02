@@ -14,9 +14,9 @@ class DDOBuilderTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        keypair = IREd25519KeyFactory().createRandomKeypair() as? IRCryptoKeypair
+        keypair = try? IRIrohaKeyFactory().createRandomKeypair() as? IRCryptoKeypair
 
-        let signer = IREd25519Sha512Signer(privateKey: keypair.privateKey())!
+        let signer = IRIrohaSigner(privateKey: keypair.privateKey())
 
         builder = DDOBuilder.createDefault().with(signer: signer)
     }
