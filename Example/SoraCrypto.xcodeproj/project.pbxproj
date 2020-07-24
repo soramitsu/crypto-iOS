@@ -15,6 +15,7 @@
 		029878BD218048DF0085E605 /* DARequestVerifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029878B3218048DF0085E605 /* DARequestVerifierTests.swift */; };
 		029878BE218048DF0085E605 /* DocumentOneCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029878B5218048DF0085E605 /* DocumentOneCoderTests.swift */; };
 		029878C4218067B00085E605 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029878C3218067B00085E605 /* Constants.swift */; };
+		842D1E3224CADDB500C30A7A /* DocumentStringCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D1E3124CADDB500C30A7A /* DocumentStringCoderTests.swift */; };
 		EE2DFA8DEFE5096CE084056C /* Pods_SoraCryptoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FF93008A45052F1220250C /* Pods_SoraCryptoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680B9CC7916672F49683BAB0 /* Pods-SoraCrypto_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoraCrypto_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoraCrypto_Tests/Pods-SoraCrypto_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6878AC65A25CCF1DAD19A742 /* Pods-SoraCryptoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoraCryptoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoraCryptoTests/Pods-SoraCryptoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		842D1E3124CADDB500C30A7A /* DocumentStringCoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStringCoderTests.swift; sourceTree = "<group>"; };
 		A582AF4520FE8E3DCCE18171 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AE249B24F844C5A41CB7538F /* SoraCrypto.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SoraCrypto.podspec; path = ../SoraCrypto.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B7FF93008A45052F1220250C /* Pods_SoraCryptoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoraCryptoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				029878B5218048DF0085E605 /* DocumentOneCoderTests.swift */,
+				842D1E3124CADDB500C30A7A /* DocumentStringCoderTests.swift */,
 			);
 			name = DocumentCoding;
 			path = ../../Tests/DocumentCoding;
@@ -287,6 +290,7 @@
 				029878BC218048DF0085E605 /* DAHttpRequestTests.swift in Sources */,
 				029878B8218048DF0085E605 /* DDOBuilderTests.swift in Sources */,
 				029878C4218067B00085E605 /* Constants.swift in Sources */,
+				842D1E3224CADDB500C30A7A /* DocumentStringCoderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SoraCrypto'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Library contains cryptography related implementation for Sora plaform.'
 
   s.homepage         = 'https://github.com/soramitsu'
