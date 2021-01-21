@@ -1,9 +1,9 @@
 PODS:
-  - IrohaCrypto/Common (0.3.0)
-  - IrohaCrypto/Iroha (0.3.0):
+  - IrohaCrypto/Common (0.7.2)
+  - IrohaCrypto/Iroha (0.7.2):
     - IrohaCrypto/Common
-  - SoraCrypto (0.1.3):
-    - IrohaCrypto/Iroha (~> 0.3.0)
+  - SoraCrypto (0.2.0):
+    - IrohaCrypto/Iroha (~> 0.7.0)
     - SoraDocuments
   - SoraDocuments (0.1.2)
 
@@ -21,10 +21,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IrohaCrypto: 5d518bd6fcde6d90be5e3f4d077d6cadb6e43fad
-  SoraCrypto: f41ee5c8d897a4f7a42632d530bb2c67b6d641a6
+  IrohaCrypto: bddf15865c4df189b9c5273ba9c675afae8b7f4c
+  SoraCrypto: c18690ac31fe6f2e4544ed45ae00bc79f597d7e7
   SoraDocuments: 15c40b30e0e90d08eeb8c79c83977465bc3cf3a2
 
-PODFILE CHECKSUM: c8d069e61fd4fe03cb67c523932c397c3d82fce8
+PODFILE CHECKSUM: d2b240a59973ab28f9ce15e50874340b675a1101
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.10.0

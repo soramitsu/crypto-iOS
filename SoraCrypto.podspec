@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SoraCrypto'
-  s.version          = '0.1.4'
+  s.version          = '0.2.0'
   s.summary          = 'Library contains cryptography related implementation for Sora plaform.'
 
   s.homepage         = 'https://github.com/soramitsu'
@@ -16,12 +16,14 @@ Pod::Spec.new do |s|
   s.author           = { 'ERussel' => 'emkil.russel@gmail.com' }
   s.source           = { :git => 'https://github.com/soramitsu/crypto-iOS.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
   s.swift_version = '5.0'
+
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'VALID_ARCHS' => 'x86_64 armv7 arm64'  }
 
   s.source_files = 'SoraCrypto/Classes/**/*'
 
-  s.dependency 'IrohaCrypto/Iroha', '~> 0.3.0'
+  s.dependency 'IrohaCrypto/Iroha', '~> 0.7.0'
   s.dependency 'SoraDocuments'
 
   s.test_spec do |st|

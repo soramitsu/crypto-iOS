@@ -1,4 +1,5 @@
-source 'https://github.com/soramitsu/podspec-ios.git'
+platform :ios, '11.0'
+
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
